@@ -1,121 +1,52 @@
-<p align="center">
-<img alt="logo" src="https://chaichaiimage.oss-cn-hangzhou.aliyuncs.com/blog3.0/%E9%A5%BF%E4%BA%86%E4%B9%88%E5%BA%97%E9%93%BA%E5%A4%B4%E5%83%8F.jpeg">
-</p>
-<p align="center">
- 本项目已支援996ICU项目<br />
-  <img alt="npm peer dependency version" src="https://img.shields.io/npm/dependency-version/element-tiptap/peer/vue?color=vue">
-  <img alt="GitHub" src="https://img.shields.io/github/license/Leecason/element-tiptap">
-   <a href="https://996.icu"><img src="https://img.shields.io/badge/link-996.icu-red.svg"></a>
-</p>
+# KZHomePage
 
-<h3 align="center">二次元办事，你放心😋</h3>
-<p align="center">一个 Vue.js 的基于 [element-ui] 开发的 二次元 个人博客模板</p>
+二次元卡片个人网站主页
 
-<p align="center">
-易上手，可扩展性强，设计简洁
-</p>
+> QQ交流群：<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=-tso4BmPVXPSgqNjPhRCIg4GYZ8Llu_e&jump_from=webapi">962303102</a>
 
-<p align="center">
-💥说明：本项目目前还处于开发阶段，没有完工！没有完工！没有完工！
-</p>
+## 使用文档
 
-<p align="center">
-🔊 [CQUCC-4-433](https://github.com/4-433) 正在找寻志同道合的小伙伴，欢迎前端、后端、UI加入我们！
-</p>
+<https://blog.170601.xyz/archives/25.html>
 
-#### ✨ **特色**
+## 使用方式
 
-------
+### 音乐配置
+使用前请填写head内的相关配置信息
 
-- 🎏 使用 [element-ui](https://github.com/ElemeFE/element) 组件：二创、二开更方便快捷
-- 🎄 高度自定义：项目注释清晰，所有图片、文字均可带效果实现自主替换
-- 🎸 移动、pc、大屏三端适配
-
-#### 🌵 **项目结构**
-
-------
-
-  ```
-   src
-   |-- assets  #静态资源
-   |    |-- image  #图片
-   |    |-- js  #js文件
-   |    |-- css  #css文件
-   |    |-- …………
-   |-- components  #公共组件
-   |    |-- HeaderView  #公共组件文件夹
-   |    |    |-- index.vue  #组件
-   |    |-- …………
-   |-- router  #路由
-   |    |-- router.js  #路由文件
-   |-- styles  #公共样式
-   |-- views  #页面组件
-   |    |-- HomeView  #页面组件文件夹
-   |    |    |-- components  #页面子组件文件夹
-   |    |    |    |-- HomeBanner.vue  #页面子组件
-   |    |    |    |-- HomeHeader.vue  #页面子组件
-   |    |    |    |-- …………
-   |    |    |-- index.scss  #页面样式文件
-   |    |    |-- index.vue  #页面组件
-   |    |-- …………
-  ```
-
-#### 📃 **关于版权**
-
-------
-
-- 🔧 本项目遵循 [MIT](https://baike.baidu.com/item/MIT/10772952) 开源协议，意味着您无需支付任何费用，也无需授权，即可使用。
-
-- 📞 注意：这并不意味着您可以将本项目应用到非法的领域，比如涉及赌博，色彩，反和谐，暴力等方面。如因此产生纠纷或法律问题，本作者不承担任何责任。
-
- ```
-  MIT License
-  
-  Copyright (c) 2022 柴柴
-  
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-  
-  The above copyright notice and this permission notice shall be included in all
-  copies or substantial portions of the Software.
-  
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-  SOFTWARE.
- ```
-
-#### 🚀 **食用方法**
-
-------
-
-##### 安装依赖
-```
-npm install
+```javascript
+    // 音乐设置
+    let meting_music_api = "https://api.mizore.cn/meting/api.php";// meting api
+    let music_server = "netease"; // 音乐服务：网易云 netease 
+    let music_type = "playlist"; // 歌曲类型：歌单playlist 单首歌曲 song  专辑 album
+    let music_id = "20173709"; // 歌单ID或歌曲ID或者专辑ID 20173709 29732992
+    let music_order = "random"; // 音频循环顺序, 顺序播放： 'list', 随机播放：'random'
+    let music_mini = false; // mini模式 吸底模式开启后此选项实效 true / false
+    let music_fixed = true; // 吸底模式
+    let music_volume = 0.7; // 默认音量
+    let music_autoplay = true; // 自动播放
+    let music_loop = "all"; // 音频循环播放, 可选值: 'all', 'one', 'none'
 ```
 
-##### 启动项目
-```
-npm run chaichai
-```
+### 按钮颜色
 
-##### 项目打包
-```
-npm run build
-```
+> 按钮颜色使用bootstraap4的颜色格式，只需要修改按钮对应的class类即可改变按钮颜色
+> https://v4.bootcss.com/docs/components/buttons/
 
-#### ☕ **给我买杯咖啡**
-------
 
-如果你喜欢本项目的话，请Star一下给个鼓励，也可以给孩子买杯咖啡，谢谢您的支持🧡
 
-<p align="center">
-<img alt="logo" src="https://chaichaiimage.oss-cn-hangzhou.aliyuncs.com/blog3.0/mm_reward_qrcode_1665305915610.png">
-</p>
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+![image.png](https://s2.loli.net/2022/06/25/J7LnAZ9ScpwzH6X.png)
+
+## 依赖项目
+
+https://github.com/metowolf/Meting
+
+https://aplayer.js.org/
